@@ -1,0 +1,15 @@
+[
+{
+  "modid": "creativezone",
+  "name": "Creative Zone",
+  "description": "Automagically toggle players in/out of creative mode in a defined zone",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["dizzyd"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
