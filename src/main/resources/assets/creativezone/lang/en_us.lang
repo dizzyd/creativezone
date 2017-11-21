@@ -1,0 +1,15 @@
+
+creativezone.usage=Available commands: radius whitelist
+
+creativezone.radius.usage=Get/sets radius for the Creative Zone (radius [NewRadius])
+creativezone.radius=Creative Zone radius is %d blocks
+creativezone.radius.set=Creative Zone radius is now %d blocks
+creativezone.radius.set.invalidnumber=Radius must be a valid integer
+creativezone.radius.set.invalidbounds=Radius must be between 25 and 1000 blocks
+
+creativezone.whitelist.usage=Manage whitelist for creative zone (whitelist [add|rm|clear])
+creativezone.whitelist=Creative Zone whitelisted users: %s
+creativezone.whitelist.cleared=Cleared whitelist for Creative Zone
+creativezone.whitelist.unknowncmd=Unknown whitelist command
+creativezone.whitelist.add.nouser=Invalid user
+creativezone.whitelist.added=Added %s to Creative Zone whitelist

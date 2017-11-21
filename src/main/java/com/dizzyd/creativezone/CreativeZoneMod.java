@@ -26,6 +26,7 @@ import net.minecraftforge.common.config.Property;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
@@ -42,6 +43,7 @@ public class CreativeZoneMod
     static int checkInterval;
     static int zoneRadius;
     static HashSet<String> whitelist = new HashSet<>();
+
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
@@ -67,9 +69,15 @@ public class CreativeZoneMod
     }
     
     @Mod.EventHandler
-    public void load(FMLInitializationEvent event)
+    public void load(FMLInitializationEvent e)
     {
         MinecraftForge.EVENT_BUS.register(new EventHandler());
+    }
+
+    @Mod.EventHandler
+    public void onServerStarted(FMLServerStartingEvent e)
+    {
+        e.registerServerCommand(new Commands());
     }
 
     public static class EventHandler {
